@@ -241,5 +241,3 @@ Tu proyecto ya tiene una arquitectura sólida que sigue principios de Clean Arch
 5. **Operación en producción** más robusta con observabilidad y seguridad
 
 Recuerda que la simplicidad es clave: no implementes todo a la vez, sino según las necesidades reales del proyecto. Cada capa de complejidad debe justificarse con un requisito concreto.
-
-¿Te gustaría que profundice en alguna de estas áreas específicas o que analice algún aspecto particular de tu código actual?
