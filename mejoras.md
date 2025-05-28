@@ -41,7 +41,6 @@ Tu proyecto ya implementa excelentes prácticas:
 **Recomendación**:
 - Implementa diferentes DTOs para diferentes vistas (detallada vs. resumida)
 - Usa query params como `?fields=id,name,email` para selección de campos
-- Considera implementar GraphQL como opción alternativa con [gqlgen](https://github.com/99designs/gqlgen)
 - Ejemplo de estructura:
   ```go
   // BasicEmployeeResponse para vista resumida
@@ -228,7 +227,6 @@ Para implementar estas mejoras, aquí tienes algunos paquetes Go de alta calidad
 - **WebSockets**: `github.com/gorilla/websocket`
 - **Background Jobs**: `github.com/hibiken/asynq`
 - **Metrics**: `github.com/prometheus/client_golang`
-- **GraphQL** (opcional): `github.com/99designs/gqlgen`
 
 ## 🚀 Consideraciones Finales
 
@@ -239,5 +237,3 @@ Tu proyecto ya tiene una arquitectura sólida que sigue principios de Clean Arch
 3. **Mayor adaptabilidad** a diferentes requisitos técnicos
 4. **Experiencia de desarrollo** mejorada con mejor documentación y herramientas
 5. **Operación en producción** más robusta con observabilidad y seguridad
-
-Recuerda que la simplicidad es clave: no implementes todo a la vez, sino según las necesidades reales del proyecto. Cada capa de complejidad debe justificarse con un requisito concreto.
