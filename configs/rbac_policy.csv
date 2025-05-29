@@ -1,0 +1,58 @@
+# Casbin Policy File
+# Format: p, sub, obj, act
+# sub = subject (role)
+# obj = object (resource)
+# act = action
+
+# Admin role permissions (full access)
+p, admin, users, create
+p, admin, users, read
+p, admin, users, update
+p, admin, users, delete
+p, admin, users, list
+p, admin, roles, create
+p, admin, roles, read
+p, admin, roles, update
+p, admin, roles, delete
+p, admin, roles, list
+p, admin, roles, assign
+p, admin, permissions, create
+p, admin, permissions, read
+p, admin, permissions, update
+p, admin, permissions, delete
+p, admin, permissions, list
+p, admin, permissions, assign
+p, admin, profile, read
+p, admin, profile, update
+p, admin, system, admin
+p, admin, system, reports
+
+# HR Manager role permissions
+p, hr_manager, users, create
+p, hr_manager, users, read
+p, hr_manager, users, update
+p, hr_manager, users, list
+p, hr_manager, roles, read
+p, hr_manager, roles, list
+p, hr_manager, roles, assign
+p, hr_manager, permissions, read
+p, hr_manager, permissions, list
+p, hr_manager, profile, read
+p, hr_manager, profile, update
+p, hr_manager, system, reports
+
+# Employee role permissions
+p, employee, users, read
+p, employee, profile, read
+p, employee, profile, update
+
+# Viewer role permissions
+p, viewer, profile, read
+
+# Group memberships (g, user, role)
+# These would be dynamically managed by the application
+# Examples:
+# g, admin@company.com, admin
+# g, hr@company.com, hr_manager
+# g, john@company.com, employee
+# g, guest@company.com, viewer

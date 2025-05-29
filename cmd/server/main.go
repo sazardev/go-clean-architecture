@@ -39,7 +39,7 @@ func main() {
 	})
 
 	// Configurar rutas
-	router.SetupRoutes(app, container.EmployeeHandler)
+	router.SetupRoutes(app, container.EmployeeHandler, container.AuthHandler, container.AuthMiddleware, container.PermissionMiddleware)
 
 	// Configurar shutdown graceful
 	c := make(chan os.Signal, 1)
@@ -57,6 +57,7 @@ func main() {
 	port := fmt.Sprintf(":%s", container.Config.Server.Port)
 	log.Printf("🚀 HR API Server starting on port %s", container.Config.Server.Port)
 	log.Printf("📚 Health check available at: http://localhost%s/health", port)
+	log.Printf("🔐 Auth endpoints: http://localhost%s/api/v1/auth", port)
 	log.Printf("🔗 API documentation: http://localhost%s/api/v1/employees", port)
 
 	if err := app.Listen(port); err != nil {
